@@ -7,20 +7,20 @@ Kumar, Devaganugula Naga Venkata Rama Krishna, Sri Venkata Durga
 Sudarsan Madhyannapu, Kankipati Subbarao), submitted to Physica D:
 Nonlinear Phenomena.
 
-**Zenodo DOI (this release, v1.1.0):** https://doi.org/10.5281/zenodo.22116347
+**Zenodo DOI (this release, v1.2.0):** https://doi.org/10.5281/zenodo.22116347
 
 **Zenodo concept DOI (always resolves to the latest version):** https://doi.org/10.5281/zenodo.22070673
 
 > **Note:** The code archived at the time of the manuscript's original submission was release
 > **v1.0.0** (https://doi.org/10.5281/zenodo.22070674). Release **v1.1.0**
-> (https://doi.org/10.5281/zenodo.22099329) extends the second-root search of Section 5.2 from
-> two states to six states spanning the full continuation branch (`branch_multiplicity_scan.csv`)
-> and is the version cited in the manuscript's reference list for the original tables and
-> figures. A further release, **v1.2.0**, adds `additional_verification.py` and its saved
-> output, verifying the generality dichotomy, the projected far-field condition and resolved
-> lambda_c, the M=0 center-manifold reduction, and the variational-sensitivity check added to
-> the manuscript after v1.1.0; see the Releases tab for the exact DOI once minted. It reproduces
-> every previously reported table and figure value unchanged.
+> (https://doi.org/10.5281/zenodo.22099329) extended the second-root search of Section 5.2 from
+> two states to six states spanning the full continuation branch (`branch_multiplicity_scan.csv`).
+> The current release, **v1.2.0** (https://doi.org/10.5281/zenodo.22116347), adds
+> `additional_verification.py` and its saved output, independently verifying the generality
+> dichotomy, the projected far-field condition and resolved branch terminus
+> lambda_c = -0.46252 +/- 0.00002, the M=0 center-manifold reduction, and the
+> variational-sensitivity check, and is the version cited in the manuscript's reference list.
+> It reproduces every previously reported table and figure value unchanged.
 
 This archive contains only the reproducibility code and data. The
 manuscript LaTeX source is submitted separately through the journal's
@@ -67,18 +67,19 @@ Requires Python 3 with numpy, scipy and matplotlib.
 
 L. Appidi, K.G.R. Deepthi, T. Prasanna Kumar, D.N.V.R. Krishna,
 S.V.D.S. Madhyannapu, K. Subbarao, cone-boundary-layer-dynamics:
-reproducibility code [software], Zenodo, v1.1.0, 2026.
-https://doi.org/10.5281/zenodo.22099329
+reproducibility code [software], Zenodo, v1.2.0, 2026.
+https://doi.org/10.5281/zenodo.22116347
 
 The saved numerical verification output in `verification_output/`
-(continuation diagnostics, the six-state second-root scan, and the
-residual-diagnostics results) is additionally citable as a dataset:
+(continuation diagnostics, the six-state second-root scan, the
+residual-diagnostics results, and the generality/projected-BC/M=0/
+variational verification) is additionally citable as a dataset:
 
 L. Appidi, K.G.R. Deepthi, T. Prasanna Kumar, D.N.V.R. Krishna,
 S.V.D.S. Madhyannapu, K. Subbarao, Numerical verification data for
 "Phase-Space Structure and Degenerate-Node Transition in an MHD Ternary
 Hybrid Nanofluid Boundary Layer on a Stretching Cone" [dataset], Zenodo,
-v1.1.0, 2026. https://doi.org/10.5281/zenodo.22099329
+v1.2.0, 2026. https://doi.org/10.5281/zenodo.22116347
 
 ## Companion manuscript
 
