@@ -5,7 +5,7 @@ Hybrid Nanofluid Boundary Layer on a Stretching Cone": the generality
 dichotomy (Section 2.4, Proposition 1), the projected far-field condition
 for lambda_c (Section 5.7, Proposition 8), the M=0 center-manifold
 reduction (Section 3.2, Proposition 4), and the variational-sensitivity
-monotonicity check (Section 5.8, Proposition 7).
+monotonicity check (Section 5.6, Proposition 7).
 
 This script is independent of cone_dynamics.py: it does not re-derive the
 reference state, but re-uses the same effective-property ratios (Table 2)

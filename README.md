@@ -13,7 +13,7 @@ Nonlinear Phenomena.
 
 > **Note:** The code archived at the time of the manuscript's original submission was release
 > **v1.0.0** (https://doi.org/10.5281/zenodo.22070674). Release **v1.1.0**
-> (https://doi.org/10.5281/zenodo.22099329) extended the second-root search of Section 5.2 from
+> (https://doi.org/10.5281/zenodo.22099329) extended the second-root search of Section 5.5 from
 > two states to six states spanning the full continuation branch (`branch_multiplicity_scan.csv`).
 > The current release, **v1.2.0** (https://doi.org/10.5281/zenodo.22116347), adds
 > `additional_verification.py` and its saved output, independently verifying the generality
@@ -39,7 +39,7 @@ additional_verification.py   verifies the generality dichotomy (Sec. 2.4),
                               the projected far-field condition and resolved
                               lambda_c (Sec. 5.7), the M=0 center-manifold
                               reduction (Sec. 3.2), and the variational-
-                              sensitivity monotonicity check (Sec. 5.8)
+                              sensitivity monotonicity check (Sec. 5.6)
 figures/                     regenerated figure output (PDF + PNG)
 verification_output/         saved numerical output backing the paper's
                               tables (continuation_diagnostics.csv,
