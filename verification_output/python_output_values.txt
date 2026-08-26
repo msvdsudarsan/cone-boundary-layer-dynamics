@@ -1,0 +1,164 @@
+================================================================
+ DYNAMICAL-SYSTEMS ANALYSIS OF THE CONE BOUNDARY LAYER
+ Python verification run: 2026-08-25 13:30:12
+================================================================
+
+---- TABLE 2: effective-property ratios (phi1=phi2=phi3=0.1, n=4.8)
+
+  A1=2.284050  A2=2.203846  A3=2.370370  A4=0.932309  A5=2.890824  A5+Rd=2.990824
+
+---- REFERENCE STATE (S=1, lam=0.2, Q=0.05, M=0.6, Pr=6.2, Rd=0.1)
+     truncation: eta_inf=15.0, h=0.0050 (matches manuscript Table 2 / Table 6 reference setting)
+
+  RK4 shoot   f''(0)=-0.1052783950  th'(0)=-0.4649582166  Cf=0.2320173353  Nu=1.4785234607  f_inf=1.3000711234
+  scipy bvp   f''(0)=-0.1052783950  th'(0)=-0.4649582166  Cf=0.2320173353  Nu=1.4785234607  f_inf=1.3000711234
+  |diff|      2.456e-15  3.103e-14  5.412e-15  9.859e-14  7.327e-14
+
+  ADMISSIBILITY: f_inf=1.300071 > 0   Qc=0.190342   Q/Qc=0.2627
+  VERDICT: ADMISSIBLE (stable node, monotone theta)
+
+---- TABLE 3: classification of the far-field equilibrium
+     f_inf=1.300071   Qc=0.190342   exact double root=-0.314078
+
+  MOMENTUM BLOCK: m_f- = -0.603969   m_f+ = +0.267123
+    root product = -0.161334  (saddle for all M>0)
+    stiffness ratio exp[(m_f+-m_f-)*20] = 3.683e+07
+
+  THERMAL BLOCK:
+      Q          Delta       m_th-       m_th+     phase portrait
+  -0.100000    86.141519   -0.701983    0.073827   saddle, dim Ws_th = 1
+   0.000000    56.472548   -0.628157    0.000000   doubly degenerate
+   0.050000    41.638062   -0.583768   -0.044389   stable node
+   0.100000    26.803577   -0.530457   -0.097699   stable node
+   0.150000    11.969091   -0.458672   -0.169484   stable node
+   0.190342    -0.000000   -0.314078   -0.314078   DEGENERATE (improper) NODE
+   0.200000    -2.865395   -0.314078 +/- 0.070748 i   stable spiral
+   0.250000   -17.699880   -0.314078 +/- 0.175835 i   stable spiral
+
+  MOTIVATING CASE S=-0.5, Q=0.1: f_inf=-0.024323  Qc=6.662e-05
+    f_inf<0 AND Q/Qc=1501.0  => outside the f_inf>0 admissibility regime; thermal block is an unstable spiral (Remark after Prop. classification).
+
+---- TABLE 6: far-field entrainment and Qc against suction S
+
+     S       f_inf         Qc      dfinf/dS
+   -0.50   no solution with f_inf > 0
+   -0.25   0.191121   0.004114        ---
+    0.00   0.408612   0.018803   0.869967
+    0.25   0.628240   0.044448   0.878510
+    0.50   0.850040   0.081373   0.887201
+    0.75   1.074002   0.129900   0.895846
+    1.00   1.300071   0.190342   0.904278
+    1.25   1.528161   0.262990   0.912361
+    1.50   1.758160   0.348111   0.919994
+    1.75   1.989938   0.445943   0.927112
+    2.00   2.223358   0.556698   0.933682
+    2.25   2.458282   0.680556   0.939694
+    2.50   2.694572   0.817674   0.945162
+    2.75   2.932100   0.968185   0.950109
+    3.00   3.170742   1.132198   0.954570
+
+---- TABLE 9: pseudo-arclength continuation in lambda
+
+  anchor: a=-0.105282  lam=0.200000  b=-0.465504  f_inf=1.299510
+  initial tangent = (0.4683, -0.8446, 0.2595)
+
+      s        f''(0)       lam        f_inf      -th'(0)       Nu
+    0.000   -0.105282    0.200000    1.299510    0.465504    1.480260
+    0.371    0.052843   -0.110328    0.810890    0.338738    1.077154
+    0.871    0.183702   -0.441311    0.075587   -0.001968   -0.006259
+    0.971    0.198156   -0.488234   -0.060247   -0.089086   -0.283285
+
+  *** TERMINUS REACHED: f_inf crossed zero between the previous point and lam=-0.488234
+  *** lambda was MONOTONE throughout: NO TURNING POINT DETECTED ON THE COMPUTED BRANCH. (Only one starting branch was followed; no multi-start search for a disconnected second branch was performed.)
+
+  last point: a=0.198156  lam=-0.488234  b=0.089086
+  22 accepted pseudo-arclength steps beyond the anchor (23 points total, including the anchor at s=0).
+
+  DIAGNOSTICS SAVED: /home/claude/work/code/github/verification_output/continuation_diagnostics.csv
+  d(lambda)/ds sign changes over the branch: 0 (0 required for 'no fold detected'; this is the primary fold diagnostic)
+  min sigma_min(DG) over the branch: 1.397208e+00 (supporting conditioning check only -- DG is 2x3 and a regular fold in the projection onto lambda need not reduce its rank, so this value is not itself a fold detector; collapse toward 0 would flag a genuine degeneracy of the residual map, but staying bounded away from 0 is not evidence against a fold)
+  tangent-orientation flips required to maintain continuity: 0 of 22 steps
+  VERDICT: d(lambda)/ds did not change sign, so no turning point was crossed along the computed branch (the sigma_min(DG) trace above is reported as a supporting regularity observation, not part of this verdict).
+
+---- TABLE 10: direct parameter march in lambda (S=1.0, L1=0.2, L2=0.2, Q=0.05, M=0.6; eta_inf=15.0, h=0.005)
+
+    lam       f''(0)       th'(0)        f_inf          Nu
+    0.20    -0.105278    -0.464958      1.300071     1.478523
+    0.10    -0.051199    -0.431179      1.156180     1.371109
+    0.00     0.000000    -0.390307      1.000000     1.241139
+   -0.10     0.048066    -0.337691      0.828805     1.073826
+   -0.20     0.092691    -0.262784      0.638866     0.835627
+   -0.30     0.133495    -0.137211      0.424925     0.436320
+   -0.35     0.152317    -0.032583      0.306680     0.103612
+   -0.40     0.169992     0.127875      0.179280    -0.406631
+   -0.45     0.186434     0.378803      0.041115    -1.204557
+   -0.47     0.192645     0.509483     -0.017606    -1.620108
+
+  f_inf crosses zero between lam=-0.45 and lam=-0.47; linear interpolation gives lambda_c ~ -0.464
+
+---- naive fixed-step march in a, a supporting cross-check (eta_inf=15.0, h=0.005, da=0.00355)
+
+  75 steps taken; f_inf crosses zero between lam=-0.3557 and lam=-0.3656
+  linear interpolation gives lambda_c ~ -0.357
+  pseudo-arclength lambda_c (interpolated between the last two accepted points, lam=-0.465196 with f_inf=0.007816 and lam=-0.488234 with f_inf=-0.060247) ~ -0.467842
+
+---- TABLE 11: sensitivity of the interpolated f_inf=0 boundary estimate to different
+    numerical settings
+
+  Method                                  eta_inf   h       lambda_c
+  Naive marching in a                       15     0.005   -0.357
+  Direct march in lambda (Table 10)         15     0.005   -0.464
+  Pseudo-arclength continuation (interpolated) 12   0.01    -0.468
+
+  spread = 0.111  (25.8% of the central value -0.430)
+
+---- TABLE 12: approach to the slip-induced ceiling
+
+  Nu_inf = A5*(1+Rd)/L2 = 15.899530   gradient ceiling 1/L2 = 5.000000
+
+    Pr      -th'(0)         Nu       Nu/Nu_inf     th(0)
+     6.2    0.464958     1.478523     0.09299    0.907008
+      10    0.709983     2.257679     0.14200    0.858003
+      20    1.230176     3.911845     0.24604    0.753965
+      50    2.220456     7.060842     0.44409    0.555909
+     100    3.062429     9.738235     0.61249    0.387514
+     200    3.792448    12.059627     0.75849    0.241510
+     500    4.432941    14.096337     0.88659    0.113412
+    1000    4.698992    14.942354     0.93980    0.060202
+    2000    4.844707    15.405713     0.96894    0.031059
+
+  Apparent exponent alpha in Nu ~ Pr^alpha over sub-windows:
+    Pr     4 ->     8: alpha = 0.935
+    Pr    20 ->    50: alpha = 0.645
+    Pr   100 ->   200: alpha = 0.308
+    Pr   500 ->  2000: alpha = 0.064
+
+---- TABLE 7: entrainment and Qc at representative nanoparticle loadings
+
+   phi      f_inf        Qc
+   0.02    1.297445    0.459412
+   0.06    1.290615    0.284390
+   0.10    1.300071    0.190342 (reference)
+   0.15    1.325563    0.125832
+
+---- Second-branch check: momentum multiplicity scan and thermal linearity verification
+    (Section 5.2 of the manuscript)
+
+  reference state:  bounded a-range (-0.120000000000001, 11.280000000000001), sign changes: [(-0.120000000000001, -0.08999999999999986)]
+  lambda=-0.2:       bounded a-range (0.08999999999999986, 11.579999999999998), sign changes: [(0.08999999999999986, 0.11999999999999744)]
+
+  Extending the momentum-multiplicity scan to 6 states spanning the entire computed continuation branch (anchor lambda=0.2 through the f_inf~0 terminus at lambda=-0.488234):
+
+    lam= 0.200000  a_known=-0.105282  finf= 1.299510  crossings=[(-0.120000000000001, -0.08999999999999986)]  bounded_range=(-0.17999999999999972, 9.420000000000002)
+    lam= 0.115659  a_known=-0.059485  finf= 1.179055  crossings=[(-0.060000000000002274, -0.030000000000001137)]  bounded_range=(-0.120000000000001, 9.479999999999997)
+    lam=-0.069537  a_known= 0.033775  finf= 0.883167  crossings=[(0.029999999999997584, 0.05999999999999872)]  bounded_range=(-0.030000000000001137, 9.629999999999995)
+    lam=-0.227289  a_known= 0.104233  finf= 0.585420  crossings=[(0.08999999999999986, 0.11999999999999744)]  bounded_range=(0.05999999999999872, 9.719999999999999)
+    lam=-0.389528  a_known= 0.166414  finf= 0.213751  crossings=[(0.14999999999999858, 0.17999999999999972)]  bounded_range=(0.11999999999999744, 9.839999999999996)
+    lam=-0.488234  a_known= 0.198156  finf=-0.060247  crossings=[(0.17999999999999972, 0.2099999999999973)]  bounded_range=(0.14999999999999858, 9.899999999999999)
+
+  total sign changes found across all 6 branch states: 6 (exactly 1 expected per state if no second root exists in the scanned window)
+  thermal shooting map b -> theta(einf) affine check: max deviation from a straight line = 1.288e-14, recovered root b* = -0.464958 (cf. Newton value -0.464958)
+
+================================================================
+ ALL BLOCKS COMPLETE.
+================================================================

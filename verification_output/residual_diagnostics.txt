@@ -1,0 +1,6 @@
+Case                              einf       h |f_prime(einf)| |theta(einf)| Newton res norm max BVP resid
+Reference (Q=0.05, node)          20.0  0.0050       5.156e-14     1.106e-15       5.157e-14     9.992e-11
+Degenerate node, Q=Qc=0.190342    20.0  0.0050       5.156e-14     5.268e-16       5.156e-14     9.981e-11
+Stable spiral, Q=0.25>Qc          20.0  0.0050       5.156e-14     1.166e-13       1.275e-13     9.977e-11
+High Prandtl, Pr=2000             20.0  0.0005       6.853e-14     5.445e-17       6.853e-14     9.998e-11
+Approaching terminus, lam=-0.45   15.0  0.0050       4.108e-14     5.143e-14       6.582e-14     9.989e-11

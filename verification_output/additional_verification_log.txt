@@ -1,0 +1,37 @@
+================================================================
+ ADDITIONAL VERIFICATION: generality, projected BC, M=0 center
+ manifold, and variational monotonicity
+ Python run: 2026-08-26 17:10:47.188963
+================================================================
+
+---- PART 1: generality dichotomy (Proposition 1) ----
+Crane's stretching-sheet equation f'''+ff''-f'^2=0: a1=1, a2=-1, a3=0, a4=0.
+  a4=0  =>  line of equilibria {(c,0,0)} exists, by Proposition 1(i).
+Present cone equation (Eq. 1)/4A2: a1=A1/(4A2), a2=-A1/(8A2), a3=-A3M/(4A2), a4=0.
+  a1=0.259098, a2=-0.129549, a3=-0.161334, a4=0.000000  (a4=0 confirmed)
+Falkner-Skan wedge flow f'''+ff''+beta(1-f'^2)=0 has a4=beta (nonzero for beta!=0):
+  no equilibrium of the form (c,0,0) exists there, by Proposition 1(ii).
+  (This is an algebraic check of Proposition 1's hypotheses, not a numerical result.)
+
+---- PART 2: projected far-field condition, lambda_c (Table 12) ----
+eta_inf= 15.0:  lambda_c (naive)=-0.464020   lambda_c (projected)=-0.463237   diff=7.83e-04
+eta_inf= 20.0:  lambda_c (naive)=-0.462678   lambda_c (projected)=-0.462575   diff=1.02e-04
+eta_inf= 25.0:  lambda_c (naive)=-0.462537   lambda_c (projected)=-0.462523   diff=1.39e-05
+Geometric error-ratio extrapolation (computed from the tabulated points above,
+not assumed or hard-coded):
+  naive column     -> limit=-0.46252, tail estimate=0.00002
+  projected column -> limit=-0.46252, tail estimate=0.00000
+  combined:  lambda_c = -0.46252 +/- 0.00002
+
+---- PART 3: M=0 center-manifold reduction (Proposition 4) ----
+k=A1/(4A2)=0.259098, m=-kc=-0.259098 (c=f_infty=1)
+Reduced normal form: d(u)/dt = p + O(3), d(p)/dt = -(k/2m) p^2 + O(3)
+-(k/2m) = 0.500000  (positive => p=0 semi-stable: attracting for p<0, repelling for p>0)
+eps=+0.0010: numerical p(eta=40)=1.019938e-03   normal-form prediction=1.020408e-03
+eps=-0.0010: numerical p(eta=40)=-9.799372e-04   normal-form prediction=-9.803922e-04
+
+---- PART 4: variational sensitivity / monotonicity check ----
+anchor                       lambda= 0.200000 a=-0.105282  v'(eta_inf)=   83.6512  min(v)=0.002050 all>0:True  min(v')=0.209989 all>0:True
+2nd continuation step        lambda=-0.110328 a= 0.052843  v'(eta_inf)=  123.6957  min(v)=0.002050 all>0:True  min(v')=0.209988 all>0:True
+near terminus                lambda=-0.441311 a= 0.183702  v'(eta_inf)=  240.8617  min(v)=0.002050 all>0:True  min(v')=0.209988 all>0:True
+last computed (past crossing) lambda=-0.488234 a= 0.198156  v'(eta_inf)=  275.1995  min(v)=0.002050 all>0:True  min(v')=0.209988 all>0:True
