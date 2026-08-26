@@ -7,7 +7,7 @@ Kumar, Devaganugula Naga Venkata Rama Krishna, Sri Venkata Durga
 Sudarsan Madhyannapu, Kankipati Subbarao), submitted to Physica D:
 Nonlinear Phenomena.
 
-**Zenodo DOI (this release, v1.1.0):** https://doi.org/10.5281/zenodo.22099329
+**Zenodo DOI (this release, v1.1.0):** https://doi.org/10.5281/zenodo.22116347
 
 **Zenodo concept DOI (always resolves to the latest version):** https://doi.org/10.5281/zenodo.22070673
 
