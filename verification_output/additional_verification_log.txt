@@ -1,7 +1,7 @@
 ================================================================
  ADDITIONAL VERIFICATION: generality, projected BC, M=0 center
  manifold, and variational monotonicity
- Python run: 2026-09-02 21:35:58.292887
+ Python run: 2026-09-12 04:51:04.869397
 ================================================================
 
 ---- PART 1: generality dichotomy (Proposition 1) ----
