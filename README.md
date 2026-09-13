@@ -7,7 +7,7 @@ Sudarsan Madhyannapu, Lakshmi Appidi, K.G.R. Deepthi, T. Prasanna
 Kumar, Devaganugula Naga Venkata Rama Krishna, Kankipati Subbarao),
 submitted to International Communications in Heat and Mass Transfer.
 
-**Zenodo DOI (this release, v1.3.0):** https://doi.org/10.5281/zenodo.22274708
+**Zenodo DOI (this release, v1.4.0):** https://doi.org/10.5281/zenodo.22729830
 
 **Zenodo concept DOI (always resolves to the latest version):** https://doi.org/10.5281/zenodo.22070673
 
@@ -19,11 +19,16 @@ submitted to International Communications in Heat and Mass Transfer.
 > `additional_verification.py` and its saved output, independently verifying the generality
 > dichotomy, the projected far-field condition and resolved branch terminus
 > lambda_c = -0.46252 +/- 0.00002, the M=0 center-manifold reduction, and the
-> variational-sensitivity check. The current release, **v1.3.0**
-> (https://doi.org/10.5281/zenodo.22274708), corrects the author order in this README and in
-> the reproducibility-code citation to match the manuscript's final author list,
-> and is the version cited in the manuscript's reference list. It reproduces every previously
-> reported table and figure value unchanged.
+> variational-sensitivity check. Release **v1.3.0**
+> (https://doi.org/10.5281/zenodo.22274708) corrected the author order in this README and in
+> the reproducibility-code citation to match the manuscript's final author list. The current
+> release, **v1.4.0** (https://doi.org/10.5281/zenodo.22729830), corrects the reduced Nusselt
+> number and slip-induced ceiling to use the wall-flux prefactor (A5+Rd), consistent with the
+> energy equation's own diffusion coefficient, in place of an earlier A5(1+Rd) form; all
+> Nusselt-number values, the ceiling Nu_infinity, and the corresponding figures and saved
+> outputs have been recomputed and regenerated accordingly, and this is the version cited in
+> the manuscript's final reference list. No other reported values (far-field entrainment, Qc,
+> lambda_c, eigenvalues) are affected by this correction.
 
 This archive contains only the reproducibility code and data. The
 manuscript LaTeX source is submitted separately through the journal's
@@ -77,8 +82,8 @@ Requires Python 3 with numpy, scipy and matplotlib. Tested with Python 3.12.3, n
 S.V.D.S. Madhyannapu, L. Appidi, K.G.R. Deepthi, T. Prasanna Kumar,
 D.N.V.R. Krishna, K. Subbarao, cone-boundary-layer-dynamics:
 reproducibility code and numerical verification data [software],
-Zenodo, v1.3.0, 2026.
-https://doi.org/10.5281/zenodo.22274708
+Zenodo, v1.4.0, 2026.
+https://doi.org/10.5281/zenodo.22729830
 
 The saved numerical verification output in `verification_output/`
 (continuation diagnostics, the six-state second-root scan, the
