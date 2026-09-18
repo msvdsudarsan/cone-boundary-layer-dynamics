@@ -1,0 +1,43 @@
+=== shape factor n sweep (phi=0.10 each) ===
+n= 3.0 A5=2.154618 Nuinf=11.273091 finf=1.300071 Qc=0.252495
+n= 3.7 A5=2.442393 Nuinf=12.711967 finf=1.300071 Qc=0.223915
+n= 4.8 A5=2.890824 Nuinf=14.954119 finf=1.300071 Qc=0.190342
+n= 5.7 A5=3.251006 Nuinf=16.755031 finf=1.300071 Qc=0.169883
+n= 6.0 A5=3.369550 Nuinf=17.347749 finf=1.300071 Qc=0.164079
+
+=== unequal loadings (n=4.8) ===
+phi=(0.1, 0.1, 0.1) A4=0.932309 A5=2.890824 finf=1.300071 Qc=0.190342 Nuinf=14.954119
+phi=(0.15, 0.05, 0.05) A4=0.939993 A5=2.516268 finf=1.305586 Qc=0.223074 Nuinf=13.081341
+phi=(0.05, 0.15, 0.05) A4=0.949162 A5=2.565698 finf=1.279579 Qc=0.214425 Nuinf=13.328488
+phi=(0.05, 0.05, 0.15) A4=0.936614 A5=2.327123 finf=1.305398 Qc=0.238664 Nuinf=12.135616
+phi=(0.02, 0.1, 0.1) A4=0.949879 A5=2.194856 finf=1.286740 Qc=0.252252 Nuinf=11.474279
+phi=(0.1, 0.02, 0.1) A4=0.942930 A5=2.158844 finf=1.308804 Qc=0.261273 Nuinf=11.294218
+phi=(0.1, 0.1, 0.02) A4=0.952969 A5=2.395976 finf=1.285734 Qc=0.233073 Nuinf=12.479881
+
+=== mixing-order sensitivity at phi=(0.10,0.10,0.10) ===
+order=(1, 2, 3) A5=2.890824 A4=0.932309 finf=1.300071 Qc=0.190342 Nuinf=14.954119
+order=(1, 3, 2) A5=3.030939 A4=0.933564 finf=1.297726 Qc=0.181657 Nuinf=15.654697
+order=(2, 1, 3) A5=2.860959 A4=0.931440 finf=1.302335 Qc=0.192573 Nuinf=14.804796
+order=(2, 3, 1) A5=2.956137 A4=0.931730 finf=1.302477 Qc=0.186732 Nuinf=15.280685
+order=(3, 1, 2) A5=3.116850 A4=0.933825 finf=1.297852 Qc=0.176938 Nuinf=16.084250
+order=(3, 2, 1) A5=3.068660 A4=0.932859 finf=1.300339 Qc=0.179946 Nuinf=15.843300
+
+=== equal loadings including a dilute state (n=4.8), with Nu at Pr=6.2 ===
+phi_i=0.01 total=0.03 A5=1.133486 finf=1.303184 Qc=0.525665 Nuinf=6.167429 Nu=1.285107 Nu/Nuinf=0.2084
+phi_i=0.02 total=0.06 A5=1.278614 finf=1.297445 Qc=0.459412 Nuinf=6.893071 Nu=1.308319 Nu/Nuinf=0.1898
+phi_i=0.06 total=0.18 A5=1.981958 finf=1.290615 Qc=0.284390 Nuinf=10.409790 Nu=1.369790 Nu/Nuinf=0.1316
+phi_i=0.10 total=0.30 A5=2.890824 finf=1.300071 Qc=0.190342 Nuinf=14.954119 Nu=1.390608 Nu/Nuinf=0.0930
+phi_i=0.15 total=0.45 A5=4.315462 finf=1.325563 Qc=0.125832 Nuinf=22.077309 Nu=1.381900 Nu/Nuinf=0.0626
+
+=== thermal slip length at the reference state, Pr=6.2 ===
+L2=0.05 Nu=1.494866 Nuinf=59.816474 Nu/Nuinf=0.025
+L2=0.10 Nu=1.458418 Nuinf=29.908237 Nu/Nuinf=0.049
+L2=0.20 Nu=1.390608 Nuinf=14.954119 Nu/Nuinf=0.093
+L2=0.50 Nu=1.220380 Nuinf=5.981647 Nu/Nuinf=0.204
+L2=1.00 Nu=1.013587 Nuinf=2.990824 Nu/Nuinf=0.339
+
+=== insensitivity of A3 to the particle electrical conductivities ===
+particle sigma x 0.001: A3=2.370292
+particle sigma x 0.01: A3=2.370362
+particle sigma x 0.1: A3=2.370370
+particle sigma x 1: A3=2.370370

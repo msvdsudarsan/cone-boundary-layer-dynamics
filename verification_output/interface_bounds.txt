@@ -1,0 +1,116 @@
+Reference: A4=0.932309 A5+Rd=2.990824 L2=0.2 Bi_K=0.066871
+
+=== 1. Bounds against Pr at the reference state (settings of the ceiling table) ===
+   Pr        lower          Nu        upper     Lambda      Q_min   hyp  inside
+   6.2    0.689238    1.390608   14.954119    0.04832   0.190057  True  True
+    10    1.081133    2.123434   14.954119    0.07793   0.265055  True  True
+    20    2.016481    3.679240   14.954119    0.15586   0.446694  True  True
+    50    4.193081    6.640993   14.954119    0.38965   0.991610  True  True
+   100    6.549661    9.159184   14.954119    0.77931   1.899805  True  True
+   200    9.109506   11.342542   14.954119    1.55862   3.716193  True  True
+   500   11.900101   13.258146   14.954119    3.89654   9.165361  True  True
+  1000   13.253449   14.053857   14.954119    7.79308  18.247309  True  True
+  2000   14.052516   14.489664   14.954119   15.58616  36.411204  True  True
+
+=== 2. Bounds against L2 at Pr=6.2 ===
+   L2     Bi_K       lower          Nu        upper   hyp inside
+ 0.05  0.01672    0.713916    1.494866   59.816474  True  True
+ 0.10  0.03344    0.705496    1.458418   29.908237  True  True
+ 0.20  0.06687    0.689238    1.390608   14.954119  True  True
+ 0.50  0.16718    0.644668    1.220380    5.981647  True  True
+ 1.00  0.33436    0.581949    1.013587    2.990824  True  True
+
+=== 3. Equal loadings: fixed scaled slip L2=0.2 versus fixed interfacial resistance Bi_K ===
+ phi  | fixed L2:   Nu      Nu_inf  | fixed Bi_K:  L2       Nu      Nu_inf   lower   hyp inside
+0.01 |  1.285107    6.1674 |  0.08248  1.464398   14.9541  0.73164  True  True
+0.02 |  1.308319    6.8931 |  0.09219  1.457434   14.9541  0.72656  True  True
+0.06 |  1.369790   10.4098 |  0.13922  1.426846   14.9541  0.70717  True  True
+0.10 |  1.390608   14.9541 |  0.20000  1.390608   14.9541  0.68924  True  True
+0.15 |  1.381900   22.0773 |  0.29527  1.341890   14.9541  0.66877  True  True
+
+=== 4. Dispersion specifications at fixed interfacial resistance Bi_K ===
+ specification                      A4        A5     Nu(fixed Bi)   upper    lower   hyp inside
+ n=3.0                            0.932309 2.154618    1.393374   14.9541  0.68924  True  True
+ n=3.7                            0.932309 2.442393    1.393079   14.9541  0.68924  True  True
+ n=4.8                            0.932309 2.890824    1.390608   14.9541  0.68924  True  True
+ n=5.7                            0.932309 3.251006    1.387334   14.9541  0.68924  True  True
+ n=6.0                            0.932309 3.369550    1.386086   14.9541  0.68924  True  True
+ phi=(0.15, 0.05, 0.05)           0.939993 2.516268    1.405907   14.9541  0.69465  True  True
+ phi=(0.05, 0.15, 0.05)           0.949162 2.565698    1.410466   14.9541  0.70111  True  True
+ phi=(0.05, 0.05, 0.15)           0.936614 2.327123    1.401192   14.9541  0.69227  True  True
+ phi=(0.02, 0.1, 0.1)             0.949879 2.194856    1.414972   14.9541  0.70162  True  True
+ phi=(0.1, 0.02, 0.1)             0.942930 2.158844    1.411066   14.9541  0.69672  True  True
+ phi=(0.1, 0.1, 0.02)             0.952969 2.395976    1.418855   14.9541  0.70379  True  True
+ order=(1, 3, 2)                  0.933564 3.030939    1.390426   14.9541  0.69012  True  True
+ order=(2, 1, 3)                  0.931440 2.860959    1.390361   14.9541  0.68862  True  True
+ order=(2, 3, 1)                  0.931730 2.956137    1.390122   14.9541  0.68883  True  True
+ order=(3, 1, 2)                  0.933825 3.116850    1.390069   14.9541  0.69031  True  True
+ order=(3, 2, 1)                  0.932859 3.068660    1.390045   14.9541  0.68963  True  True
+ spread of Nu over all specifications at fixed Bi_K: 1.386086 to 1.418855 (2.36% of the minimum); upper bound 1/Bi_K = 14.954119 for every one
+
+=== 5. Kapitza lengths expressed as Bi_K = l_K (8c/nu_f)^(1/2) (water side) ===
+ nu_f = Pr k_f/(rho_f c_pf) = 9.1210e-07 m^2/s ; (rho c_p)_thnf = 3.8848e+06 J/m^3K
+ hydrophilic TDTR 3 nm          c=  0.1 1/s: Bi_K=2.810e-06  L2=8.403e-06
+ hydrophilic TDTR 3 nm          c=  1.0 1/s: Bi_K=8.885e-06  L2=2.657e-05
+ hydrophilic TDTR 3 nm          c= 10.0 1/s: Bi_K=2.810e-05  L2=8.403e-05
+ hydrophobic TDTR 12 nm         c=  0.1 1/s: Bi_K=1.124e-05  L2=3.361e-05
+ hydrophobic TDTR 12 nm         c=  1.0 1/s: Bi_K=3.554e-05  L2=1.063e-04
+ hydrophobic TDTR 12 nm         c= 10.0 1/s: Bi_K=1.124e-04  L2=3.361e-04
+ apparent microscale 4.2 um     c=  0.1 1/s: Bi_K=3.957e-03  L2=1.183e-02
+ apparent microscale 4.2 um     c=  1.0 1/s: Bi_K=1.251e-02  L2=3.742e-02
+ apparent microscale 4.2 um     c= 10.0 1/s: Bi_K=3.957e-02  L2=1.183e-01
+ apparent microchannel 150 um   c=  0.1 1/s: Bi_K=1.405e-01  L2=4.202e-01
+ apparent microchannel 150 um   c=  1.0 1/s: Bi_K=4.442e-01  L2=1.329e+00
+ apparent microchannel 150 um   c= 10.0 1/s: Bi_K=1.405e+00  L2=4.202e+00
+ Scaled slip L2=0.2 at the reference state corresponds to:
+   c=  0.1 1/s: l_K = 71.40 um, suction |v_w| = 0.2136 mm/s
+   c=  1.0 1/s: l_K = 22.58 um, suction |v_w| = 0.6753 mm/s
+   c= 10.0 1/s: l_K = 7.14 um, suction |v_w| = 2.1355 mm/s
+ Interface-limited regime Lambda = l_K (rho c_p)_thnf |v_w| / (2 k_f) = 1 requires |v_w| = 2 k_f/(l_K (rho c_p)_thnf):
+   l_K = 3 nm   : |v_w| = 1.0520e+02 m/s
+   l_K = 12 nm  : |v_w| = 2.6299e+01 m/s
+   l_K = 150 um : |v_w| = 2.1039e-03 m/s
+
+=== 6. Exact asymptotic-suction solution (lambda=0, Q=0: f = S, theta = theta(0) exp(-beta eta)) ===
+ Nu_exact = 1/(4/(Pr A4 S) + Bi_K); solver run at eta_inf = 60, h = 0.002
+   S=0.5 Pr=  6.2: f_inf=0.5000000000 Nu=0.6892378763 exact=0.6892375431 diff=3.3e-07
+   S=0.5 Pr= 50.0: f_inf=0.5000000000 Nu=4.1930808757 exact=4.1930808757 diff=1.2e-14
+   S=1.0 Pr=  6.2: f_inf=1.0000000000 Nu=1.3177402429 exact=1.3177402429 diff=3.1e-13
+   S=1.0 Pr= 50.0: f_inf=1.0000000000 Nu=6.5496605654 exact=6.5496605654 diff=1.2e-13
+   S=2.0 Pr=  6.2: f_inf=2.0000000000 Nu=2.4220519685 exact=2.4220519685 diff=5.2e-13
+   S=2.0 Pr= 50.0: f_inf=2.0000000000 Nu=9.1095058257 exact=9.1095058257 diff=0.0e+00
+
+=== 7. Series estimate 1/(4/(Pr A4 S)+Bi_K) against computed Nu at the reference state ===
+   Pr=   6.2: estimate=1.317740 Nu=1.390608 difference=+5.530%
+   Pr=    10: estimate=2.016481 Nu=2.123434 difference=+5.304%
+   Pr=    20: estimate=3.553757 Nu=3.679240 difference=+3.531%
+   Pr=    50: estimate=6.549661 Nu=6.640993 difference=+1.394%
+   Pr=   100: estimate=9.109506 Nu=9.159184 difference=+0.545%
+   Pr=   200: estimate=11.322038 Nu=11.342542 difference=+0.181%
+   Pr=   500: estimate=13.253449 Nu=13.258146 difference=+0.035%
+   Pr=  1000: estimate=14.052516 Nu=14.053857 difference=+0.010%
+   Pr=  2000: estimate=14.489305 Nu=14.489664 difference=+0.002%
+
+=== 8. Truncation check of the reference state (h = 0.005) ===
+   eta_inf= 15: f_inf=1.30007112 Nu=1.39060806
+   eta_inf= 20: f_inf=1.30017846 Nu=1.39023003
+   eta_inf= 30: f_inf=1.30018405 Nu=1.39020277
+
+=== 9. Saturation defect Nu_inf - Nu against the proved bound Nu_inf/(1+Lambda) ===
+ Theorem 4 gives 0 < Nu_inf - Nu <= Nu_inf/(1 + gamma L2) with gamma L2 = Lambda.
+   Pr      Nu_inf          Nu      defect       bound   bound/defect
+   6.2   14.954119    1.390608   13.563510   14.264881        1.052
+    10   14.954119    2.123434   12.830685   13.872986        1.081
+    20   14.954119    3.679240   11.274878   12.937638        1.147
+    50   14.954119    6.640993    8.313125   10.761038        1.294
+   100   14.954119    9.159184    5.794934    8.404458        1.450
+   200   14.954119   11.342542    3.611576    5.844613        1.618
+   500   14.954119   13.258146    1.695972    3.054018        1.801
+  1000   14.954119   14.053857    0.900262    1.700669        1.889
+  2000   14.954119   14.489664    0.464454    0.901602        1.941
+ log-log defect exponent, all 9 points: -0.5857  (standard error 0.0558; 95% CI +/- 0.1095 normal, +/- 0.1321 with t(7))
+ log-log defect exponent, Pr in [200,2000]: -0.8906
+ at Pr=2000: computed defect 0.464454, proved bound 0.901602, ratio 1.941
+ apparent Nu exponent between Pr=500 and 2000: 0.064
+
+wrote figures/fig7_nusselt_ceiling.pdf and figures/fig8_regime_map.pdf
