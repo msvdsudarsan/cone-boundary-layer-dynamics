@@ -4,18 +4,31 @@ Reproducibility code and numerical data for "Interfacial Thermal Resistance and 
 K.G.R. Deepthi, T. Prasanna Kumar, Devaganugula Naga Venkata Rama Krishna,
 Kankipati Subbarao), submitted to the Journal of Molecular Liquids.
 
-**Zenodo concept DOI (resolves to the latest version):** https://doi.org/10.5281/zenodo.22070673
+**Zenodo DOI for this release (v1.5.0):** https://doi.org/10.5281/zenodo.22834618
 
-This release (v1.7.0) accompanies the revised Journal of Molecular Liquids submission. It adds
-Section 9 of `interface_bounds.py`, which computes the high-Prandtl saturation defect
-Nu_inf - Nu against the bound Nu_inf/(1 + Lambda) proved in Theorem 4, together with the log-log
-defect exponents and their confidence interval, so that every number quoted in Section 3.4 of the
-manuscript is machine-generated rather than transcribed. Two figures reported in the previous
-release were quoted incorrectly in the manuscript text (0.4938 and 0.9586 for the defect and the
-bound at Pr = 2000); the correct values, 0.464454 and 0.901602, are now produced by this script.
-No computed result changes: the solver output of v1.6.0 is reproduced bit for bit. Earlier
-additions (`interface_bounds.py` itself, dilute-loading and slip-length sweeps in
-`dispersion_sensitivity.py`, corrected slip schematic) are retained.
+**Zenodo concept DOI (all versions, resolves to the latest):** https://doi.org/10.5281/zenodo.22070673
+
+This release (v1.5.0) is the first release since v1.4.0 and accompanies the Journal of
+Molecular Liquids submission. Compared with v1.4.0 it:
+
+- adds `interface_bounds.py`, which checks the series-resistance bounds on the wall heat
+  flux, repeats the dispersion sweeps at fixed interfacial (Kapitza) resistance, calibrates
+  the thermal slip parameter against measured Kapitza lengths, verifies the exact
+  asymptotic-suction solution used as a solver benchmark, computes the high-Prandtl
+  saturation defect against the proved bound, and draws the two interfacial figures;
+- extends `dispersion_sensitivity.py` with the dilute 3 vol% state, a thermal-slip-length
+  sweep and a check that A3 is insensitive to the particle electrical conductivities;
+- extends `additional_verification.py` with the f_inf and Qc sweep at M = 1.5;
+- corrects the slip schematic so that both temperature profiles decrease monotonically from
+  the wall, with both inner-layer scalings marked, and sets the apparent-Kapitza-length band
+  of the regime map to 4-150 um to match the values tabulated in the manuscript;
+- regenerates all figures and verification outputs from a single clean run of the six
+  scripts, and updates the docstrings and this README to the current manuscript title, with
+  a table mapping the internal code numbering to the manuscript numbering.
+
+Two numbers quoted in an earlier draft of the manuscript text (0.4938 and 0.9586 for the
+high-Prandtl defect and its bound at Pr = 2000) were wrong; the values produced by this
+release are 0.464454 and 0.901602.
 
 This archive contains only the reproducibility code and data. The
 manuscript LaTeX source is submitted separately through the journal's
@@ -73,8 +86,8 @@ Requires Python 3 with numpy, scipy and matplotlib. Tested with Python 3.12.3, n
 
 [dataset] S.V.D.S. Madhyannapu, L. Appidi, K.G.R. Deepthi, T. Prasanna Kumar,
 D.N.V.R. Krishna, K. Subbarao, cone-boundary-layer-dynamics: reproducibility
-code and numerical verification data, Zenodo, v1.7.0, 2026.
-https://doi.org/10.5281/zenodo.22070673
+code and numerical verification data, Zenodo, v1.5.0, 2026.
+https://doi.org/10.5281/zenodo.22834618
 
 ## Companion manuscript
 
